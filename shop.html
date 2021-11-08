@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <title>PUI Website</title>
+    <script src="js/script.js" async></script>
+  </head>
+  <! STICKY NAV !>
+  <div class="navbar" id="mynavbar">
+    <div>
+      <a href="index.html">
+        <img id="sitelogo" src="images/site-logo.png" height="50px" />
+      </a>
+    </div>
+    <a href="shop.html">Shop</a>
+    <a href="contact.asp">Sale</a>
+    <a href="about.asp">About</a>
+    <a id="nav-rightside" href="cart.html">
+      <img src="images/store-icons.png" height="35px" />
+
+      <h4 id="cartitems">
+        <script>
+          var cartitems = JSON.parse(localStorage.getItem("cart"));
+          var nItems = cartitems.length;
+          document.getElementById("cartitems").innerText = JSON.stringify(
+            nItems
+          );
+        </script>
+      </h4>
+    </a>
+  </div>
+  <h1 class="shop-label">Shop</h1>
+  <section class="shop-head">
+    <h3>Pillow Styles</h3>
+    <p>
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+      tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
+      veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+      commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
+      velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
+      cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id
+      est laborum.
+    </p>
+  </section>
+  <section>
+    <div class="container-shop">
+      <div class="shop-1">
+        <figure>
+          <img
+            class="shop-item"
+            src="shop-items/bed-pillow.jpg"
+            alt="bed Pillow"
+          />
+        </figure>
+        <img src="images/colors.png" height="6%" alt="colors" />
+      </div>
+
+      <div class="shop-1-caption">
+        <h5>Bed Pillow</h5>
+        <p>20.99</p>
+      </div>
+      <div class="shop-2">
+        <figure>
+          <img
+            class="shop-item"
+            src="shop-items/couch-pillow.jpg"
+            alt="couch pillow"
+          />
+        </figure>
+        <img src="images/colors.png" height="6%" alt="colors" />
+      </div>
+      <div class="shop-2-caption">
+        <h5>Couch Pillow</h5>
+        <p>20.99</p>
+      </div>
+    </div>
+    <div class="container-shop">
+      <div class="shop-1">
+        <a href="product-page.html">
+          <img
+            class="shop-item"
+            src="shop-items/floor-pouf.jpg"
+            height="90%"
+            alt="floor pouf"
+          />
+          <img src="images/colors.png" height="6%" alt="colors" />
+        </a>
+      </div>
+      <div class="shop-1-caption">
+        <h5>Floor Pouf</h5>
+        <p>20.99</p>
+      </div>
+      <div class="shop-2">
+        <figure>
+          <img
+            class="shop-item"
+            src="shop-items/round-pillow.jpg"
+            alt="round pillow"
+          />
+        </figure>
+        <img src="images/colors.png" height="6%" alt="colors" />
+      </div>
+      <div class="shop-2-caption">
+        <h5>Bed Pillow</h5>
+        <p>20.99</p>
+      </div>
+    </div>
+  </section>
+
+  <div class="footer">
+    <div class="footer-1">
+      <img src="images/site-logo-footer.png" height="80" alt="site logo" />
+    </div>
+    <div class="footer-2">
+      <b class="p-white">PAGES</b>
+      <p class="p-white">
+        About<br />
+        Ethics and Sustainability<br />
+        Gift<br />
+        Cards<br />
+        Discounts<br />
+        Careers<br />
+      </p>
+    </div>
+    <div class="footer-3">
+      <b class="p-white">SUPPORT</b>
+      <p class="p-white">
+        FAQS<br />
+        Returns<br />
+        Shipping<br />
+        Contact<br />
+        Privacy Policy
+      </p>
+    </div>
+    <div class="footer-4">
+      <h3 style="color: white;">Hear it First</h3>
+      <input type="text" />
+      <div class="button">
+        <a href="shop.html" class="subscribe">SUBSCRIBE</a>
+      </div>
+    </div>
+  </div>
+</html>

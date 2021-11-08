@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <title>PUI Website</title>
+    <script src="js/script.js" async></script>
+  </head>
+
+  <body onload="onLoad()">
+    <! STICKY NAV !>
+    <div class="navbar" id="mynavbar">
+      <div>
+        <a href="index.html">
+          <img id="sitelogo" src="images/site-logo.png" height="50px" />
+        </a>
+      </div>
+      <a href="shop.html">Shop</a>
+      <a href="contact.asp">Sale</a>
+      <a href="about.asp">About</a>
+      <a id="nav-rightside" href="cart.html">
+        <img src="images/store-icons.png" height="35px" />
+
+        <h4 id="cartitems">
+          <script>
+            var cartitems = JSON.parse(localStorage.getItem("cart"));
+            var nItems = carItems.length;
+            document.getElementById("cartitems").innerText = JSON.stringify(
+              nItems
+            );
+          </script>
+        </h4>
+      </a>
+    </div>
+
+    <section class="section1">
+      <div class="container">
+        <div class="item-a">
+          <img src="images/sitelogo2.png" height="40%" />
+          <h3>
+            Your number one destination for locally sourced handmade designer
+            pillows.
+          </h3>
+          <div class="enter-shop">
+            <a href="shop.html" class="button">ENTER SHOP</a>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section>
+      <div class="container">
+        <div class="item-b">
+          <h2>All made from hand-dyed, hand-knitted cotton yarn.</h2>
+          <div class="enter-shop">
+            <a href="shop.html" class="button">OUR COMPANY ETHOS</a>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="section3">
+      <div class="container">
+        <div class="item-c">
+          <h2>We support local textile artists!</h2>
+          <p>
+            Every new product line showcases the works of independent textile
+            artists, all handmade in our studio in Pittsburgh, PA.
+          </p>
+          <div class="enter-shop">
+            <a href="shop.html" class="button">SHOP NEW ARRIVALS</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </body>
+  <div class="footer">
+    <div class="footer-1">
+      <img src="images/site-logo-footer.png" height="80%" />
+    </div>
+    <div class="footer-2">
+      <b class="p-white">PAGES</b>
+      <p class="p-white">
+        About<br />
+        Ethics and Sustainability<br />
+        Gift<br />
+        Cards<br />
+        Discounts<br />
+        Careers<br />
+      </p>
+    </div>
+    <div class="footer-3">
+      <b class="p-white">SUPPORT</b>
+      <p class="p-white">
+        FAQS<br />
+        Returns<br />
+        Shipping<br />
+        Contact<br />
+        Privacy Policy
+      </p>
+    </div>
+    <div class="footer-4">
+      <h3 style="color: white;">Hear it First</h3>
+      <input type="text" />
+      <div class="button">
+        <a href="shop.html" class="subscribe">SUBSCRIBE.</a>
+      </div>
+    </div>
+  </div>
+</html>

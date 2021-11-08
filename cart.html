@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head >
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <title>PUI Website</title>
+    <script src="js/script.js" async></script>
+  </head>
+  <body onload="onLoad()">
+    
+      <! STICKY NAV !>
+      <div class="navbar" id="mynavbar">
+        <div>
+          <a href="index.html">
+            <img id="sitelogo" src="images/site-logo.png" height="50px" />
+          </a>
+        </div>
+        <a href="shop.html">Shop</a>
+        <a href="contact.asp">Sale</a>
+        <a href="about.asp">About</a>
+        <a id="nav-rightside" href="cart.html">
+          <img src="images/store-icons.png" height="35px" />
+  
+          <h4 id="cartitems"><script>
+            var cartitems = JSON.parse(localStorage.getItem("cart"));
+            var nItems = cartitems.length;
+            document.getElementById("cartitems").innerText = JSON.stringify(
+              nItems
+            );
+          </script></h4>
+        </a>
+      </div>
+     <! end of navbar !>
+     <section class="cart-section">
+        <div class="container-cart-labels">
+          <h2>Your Cart </h2>
+        </div>
+     <div class="container-cart-labels">
+       <div class="child">
+      <div><h4>ITEM</h4></div>
+       </div>
+       
+    <div><h4>PRICE</h4></div>
+    <div><h4>QUANTITY</h4></div>
+    <div><h4>TOTAL</h4></div>
+     
+     </div>
+
+<div class="container-cart-parent" >
+           <!-- <div class="container-cart">
+        <div class="cart-item">
+          <img src="shop-items/floor-pouf.jpg" width=100% />
+      </div>
+      <div class="cart-item-description">
+
+        <p><strong>Floor Pouf Pillow</br>
+
+            Color:</strong> Back to School Special</br>
+            
+            <strong>Filling: </strong> Foam
+        </p>
+
+        </div>
+        <div class="item-price-container">
+            
+          <p class="item-price">
+              $20.99
+          </p>
+         
+       
+        </div>
+        <div class="item-quantity-container">
+
+          <input type="number" class="item-quantity" name="item-quantity"
+       min="1" max="100" value="1">
+          </div>
+
+          <div class="cart-item-total-parent">
+
+            <p class="cart-item-total">$20.99</p>
+            <button class="remove-item">Remove Item</button>
+          </div>
+      </div>  
+      <div class="container-cart">
+          <div class="cart-item">
+            <img src="shop-items/floor-pouf2.jpg" width=100% />
+        </div>
+        <div class="cart-item-description">
+  
+          <p><strong>Floor Pouf Pillow</strong></br>
+  
+              <strong>Color:</strong> Cozy Denim</br>
+              
+              <strong>Filling:</strong> Memory Foam
+          </p>
+  
+          </div>
+          <div class="item-price-container">
+              
+            <p class="item-price">
+                $45.99
+            </p>
+         
+          </div>
+          <div class="item-quantity-container">
+  
+            <input type="number" class="item-quantity" name="item-quantity"
+            min="1" max="100" value="1">
+            
+            </div>
+  
+            <div class="cart-item-total-parent">
+  
+              <p class="cart-item-total">$45.99</p>
+              <button class="remove-item">Remove Item</button>
+            </div>
+        </div>  -->
+</div>
+
+        <div class="container-cart-details">
+    
+            <div class="cart-details">
+              <div><p><strong>Subtotal</br>
+              Shipping</br>
+            TOTAL (USD)</strong></p></div>
+              <div><p id="cart-total">$56.99</br></p>
+              <p id= "shipping">FREE</br></p>
+            <p id="cart-total-with-shipping">$56.99</p>   
+              </div>
+               
+            </div>
+          <div class="cart-details2">
+              <div class="enter-shop">
+                  <a href="shop.html" class="button">CHECKOUT</a>
+                </div>
+          </div> 
+          
+        </div>
+     
+      
+ 
+     </section>
+     
+    <div class="footer">
+        <div class="footer-1">
+          <img src="images/site-logo-footer.png" height=80% />
+        </div>
+        <div class="footer-2">
+          <b class="p-white">PAGES</b>
+          <p class="p-white">
+            About<br />
+            Ethics and Sustainability<br />
+            Gift<br />
+            Cards<br />
+            Discounts<br />
+            Careers<br />
+          </p>
+        </div>
+        <div class="footer-3">
+          <b class="p-white">SUPPORT</b>
+          <p class="p-white">
+            FAQS<br />
+            Returns<br />
+            Shipping<br />
+            Contact<br />
+            Privacy Policy
+          </p>
+        </div>
+        <div class="footer-4">
+          <h3 style="color: white;">Hear it First</h3>
+    <p></p>
+          <input type="text"/>
+          <div class="button">
+              <a href="shop.html" class="subscribe">SUBSCRIBE</a>
+              </div>
+        </div>
+      </div>
+      
+</html>

@@ -1,0 +1,713 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+/* CSS RESET */
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+/* END OF CSS RESET */
+/* START OF CUSTOM CSS */
+
+b {
+  font-weight: bold;
+}
+
+/* Importing system fonts */
+
+@font-face {
+  font-family: "cabinet_groteskbold";
+  src: url("fonts/cabinetgrotesk-bold-webfont.woff2") format("woff2"),
+    url("fonts/cabinetgrotesk-bold-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "cabinet_groteskextrabold";
+  src: url("fonts/cabinetgrotesk-extrabold-webfont.woff2") format("woff2"),
+    url("fonts/cabinetgrotesk-extrabold-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "cabinet_groteskblack";
+  src: url("fonts/cabinetgrotesk-black-webfont.woff2") format("woff2"),
+    url("fonts/cabinetgrotesk-black-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+html {
+  /* font-family: Arial, Helvetica, sans-serif; */
+  font-family: "IBM Plex Sans", Helvetica, Arial, sans-serif;
+  font-weight: 300;
+  font-size: 14px;
+}
+
+* {
+  box-sizing: border-box;
+  /* background: rgba(255, 0, 0, 0.3); */
+}
+
+h1 {
+  font-family: cabinet_groteskextrabold, serif;
+  line-height: 0px;
+}
+h2 {
+  font-family: cabinet_groteskbold, serif;
+  font-size: 4vw;
+  color: black;
+}
+
+h3 {
+  font-family: cabinet_groteskbold, serif;
+  font-size: 2em;
+  color: black;
+}
+h4 {
+  font-family: "IBM Plex Sans", Helvetica, Arial, sans-serif;
+  font-size: 1.5em;
+  color: black;
+  font-weight: bold;
+}
+h5 {
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  font-size: 2vw;
+  font-weight: bold;
+}
+h6 {
+  font-family: lust-didone, serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+/* For type, when you are declaring line-height, do so using "em" instead of "rem" so that the value is derived from the size of the element in question, not the root of the document. */
+
+h1 {
+  font-size: 3rem;
+
+  padding-bottom: 1rem;
+  color: #39a0ff;
+  color: rgba(57, 160, 255, 0.8);
+}
+
+p {
+  line-height: 1.5em;
+  color: black;
+}
+
+/* strong can be used in place of "bold" and em can be used in place of "italic" */
+
+p strong {
+  font-weight: bold;
+  /* text-transform: uppercase; */
+}
+
+p em {
+  font-style: italic;
+}
+
+p a {
+  color: rgba(57, 160, 255, 0.8);
+  font-weight: 500;
+  text-decoration: none;
+}
+
+p a:hover {
+  text-decoration: underline;
+}
+
+figure {
+  font-size: 0.8rem;
+}
+
+figure figcaption {
+  font-family: arboria, sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 0.8rem;
+  text-transform: lowercase;
+  padding: 1rem 0 2rem;
+}
+
+figure img {
+  display: block;
+  width: auto;
+  height: 30vh;
+  flex-direction: column;
+}
+
+header,
+main,
+.footer {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-column-gap: 20px;
+  padding: 0;
+  background-color: black;
+  grid-template-rows:
+    [row1-start]
+    30vh [row1-end];
+}
+
+/* building CSS Grid */
+
+.footer-1 {
+  grid-column-start: 2;
+  grid-column-end: 3;
+  grid-row-start: row1-start;
+  grid-row-end: row1-end;
+  padding: 20px 10px 40px 10px;
+}
+.footer-2 {
+  grid-column-start: 3;
+  grid-column-end: 4;
+  grid-row-start: row1-start;
+  grid-row-end: row1-end;
+  padding: 20px 10px 40px 10px;
+}
+.footer-3 {
+  grid-column-start: 4;
+  grid-column-end: 5;
+  grid-row-start: row1-start;
+  grid-row-end: row1-end;
+  padding: 20px 10px 40px 10px;
+}
+.footer-4 {
+  grid-column-start: 5;
+  grid-column-end: 6;
+  grid-row-start: row1-start;
+  grid-row-end: row1-end;
+  padding: 20px 10px 40px 10px;
+}
+
+/* MAIN SITE GRID */
+
+.container {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-rows:
+    [row1-start]
+    19vh [row1-end row2-start] 19vh [row2-end row3-start]
+    19vh [row3-end row4-start] 19vh [row4-end row5-start]
+    19vh[row5-end];
+  grid-column-gap: 20px;
+  padding: 20px;
+  color: white;
+  margin-left: 50px;
+  margin-right: 50px;
+}
+
+.item-b {
+  grid-column-start: 1;
+  grid-column-end: 3;
+  grid-row-start: row3-start;
+  grid-row-end: row5-end;
+}
+.item-a {
+  grid-column-start: 5;
+  grid-column-end: 7;
+  grid-row-start: row4-start;
+  grid-row-end: row5-end;
+}
+.item-c {
+  grid-column-start: 1;
+  grid-column-end: 3;
+  grid-row-start: row1-start;
+  grid-row-end: row1-end;
+  margin-left: 5vw;
+}
+
+.product {
+  grid-column-start: 1;
+  grid-column-end: 2;
+  grid-row-start: row1-end;
+  grid-row-end: row3-end;
+}
+.product-customize {
+  grid-column-start: 6;
+  grid-column-end: 7;
+  grid-row-start: row1-end;
+  grid-row-end: row4-end;
+}
+
+/* END OF MAIN SITE GRID */
+
+/* SHOP GRID */
+
+.container-shop {
+  display: grid;
+  grid-template-columns: [col1] 10vw [col2]23vw [col3] 23vw[col4] 10vw [col5];
+  grid-template-rows:
+    [row1-start]
+    35vh [row2-end row3-start]5vh [row3-end];
+  grid-column-gap: 20px;
+  padding-bottom: 50px;
+  margin-left: 15vw;
+  margin-right: 15vw;
+  background-color: white;
+}
+
+.shop-head {
+  margin-right: 15vw;
+  margin-left: 15vw;
+  background-color: white;
+  padding: 50px;
+}
+.shop-1-caption {
+  grid-column-start: col2;
+  grid-column-end: col3;
+  grid-row-start: row3-start;
+  grid-row-end: row3-end;
+  padding: 10px;
+}
+.shop-2-caption {
+  grid-column-start: col3;
+  grid-column-end: col4;
+  grid-row-start: row3-start;
+  grid-row-end: row3-end;
+  padding: 10px;
+}
+
+.shop-1 {
+  grid-column-start: col2;
+  grid-column-end: col3;
+  grid-row-start: row1-start;
+  grid-row-end: row2-end;
+  background-color: white;
+  border: 1px solid rgb(80, 80, 80);
+  padding: 10px;
+}
+
+.shop-2 {
+  grid-column-start: col3;
+  grid-column-end: col4;
+  grid-row-start: row1-start;
+  grid-row-end: row2-end;
+  background-color: white;
+  border: 1px solid rgb(80, 80, 80);
+  padding: 10px;
+}
+/* END OF SHOP GRID */
+
+/* Nav Bar */
+
+#sitelogo {
+  padding: 5px;
+}
+.navbar a {
+  color: #f2f2f2;
+  text-align: center;
+  margin: auto 10px;
+  text-decoration: none;
+}
+.navbar div a {
+  padding: 0px;
+}
+
+#nav-rightside {
+  margin: auto 10px auto auto;
+  display: flex;
+  flex-direction: row;
+}
+
+.navbar {
+  overflow: hidden;
+  display: flex;
+  flex-direction: row;
+  background-color: black;
+  position: sticky;
+  top: 0; /* Position the navbar at the top of the page */
+  width: 100%; /* Full width */
+}
+
+.full-width {
+  left: 100%;
+  margin-top: 50px;
+  margin-left: -50vw;
+  margin-right: 0;
+  max-width: 100vw;
+  position: relative;
+  right: 0;
+  width: 100vw;
+  height: 100vh;
+}
+
+.p-white {
+  color: white;
+}
+
+.shop-item {
+  max-width: 100%;
+  max-height: 80vh;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+html {
+  background: url(images/cloud-bg.jpeg) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+/* SECTION BACKGROUND IMAGES */
+
+.section1 {
+  background-image: url("images/pillows-pg.jpg");
+  background-size: 100% 100%;
+}
+
+.section3 {
+  background-image: url("images/section-3.jpg");
+  background-size: 100% 100%;
+}
+.section4 {
+  background-image: url("images/section-4.jpg");
+  background-size: 100% 100%;
+}
+
+#floor-pouf {
+  background-image: url("images/floor-pouf-1.png");
+  background-size: 50%;
+  background-position: center; /* Center the image */
+  background-repeat: no-repeat; /* Do not repeat the image */
+  background-color: white;
+}
+
+/* ETC ETC */
+
+.shop-main {
+  margin-top: 100px;
+}
+
+.shop-label {
+  font-size: 10em;
+  color: white;
+  transform: rotate(-90deg);
+  position: fixed;
+  bottom: 25%;
+  left: -2%;
+}
+
+sup {
+  position: relative;
+  top: -3em;
+  left: 1em;
+  font-size: 20%;
+  font-family: "IBM Plex Sans", Helvetica, Arial;
+}
+
+.select {
+  margin: 20px;
+}
+
+.enter-shop {
+  margin-top: 10px;
+  float: right;
+  bottom: 0;
+}
+
+.button {
+  background-color: black; /* Green */
+  border: none;
+  color: white;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+}
+
+.add-to-cart {
+  background-color: black; /* Green */
+  border: none;
+  color: white;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+}
+
+.subscribe {
+  background-color: black; /* Green */
+  border: 1px solid white;
+  color: white;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+}
+
+.active {
+  font-weight: bold;
+}
+
+#cartitems {
+  color: #f2f2f2;
+  text-align: center;
+  margin: auto 10px;
+  text-decoration: none;
+}
+
+#popup {
+  display: none;
+  position: fixed; /* Stay in place */
+  padding: 50px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 20%; /* Full width */
+  height: 20%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: white;
+  opacity: 80%;
+  border: 2px solid black;
+}
+
+.color-options {
+  max-width: 90px;
+}
+
+.select-color {
+  display: flex;
+  flex-direction: row;
+}
+
+.cart-section {
+  margin: 0px 15%;
+  background-color: white;
+  min-height: 100vh;
+}
+
+/* CART GRID */
+
+.container-cart {
+  display: grid;
+  grid-template-columns: [col1] 16% [col2]32% [col3] 16%[col4] 16% [col5];
+  grid-template-rows:
+    [row1-start]
+    10vh [row1-end row2-start] 15vh [row2-end];
+  grid-column-gap: 15px;
+  margin: 5px 50px;
+  border-top: 1px solid black;
+}
+.container-cart > * {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.cart-item {
+  grid-column-start: col1;
+  grid-column-end: col2;
+  grid-row-start: row1-start;
+  grid-row-end: row2-end;
+}
+.cart-item-description {
+  grid-column-start: col2;
+  grid-column-end: col3;
+  grid-row-start: row1-start;
+  grid-row-end: row2-end;
+}
+.item-price-container {
+  grid-column-start: col3;
+  grid-column-end: col4;
+  grid-row-start: row1-start;
+  grid-row-end: row2-end;
+}
+
+.item-quantity-container {
+  grid-column-start: col4;
+  grid-column-end: col5;
+  grid-row-start: row1-start;
+  grid-row-end: row2-end;
+}
+.cart-item-total-parent {
+  grid-column-start: col5;
+  grid-column-end: col6;
+  grid-row-start: row1-start;
+  grid-row-end: row2-end;
+  display: flex;
+  flex-direction: column;
+}
+.container-cart-details {
+  padding-right: 5vh;
+  padding-bottom: 5vh;
+}
+
+.cart-details {
+  /*overall cart details */
+  grid-column-start: col4;
+  grid-column-end: col6;
+  grid-row-start: row1-start;
+  grid-row-end: row1-end;
+  background-color: white;
+  display: flex;
+  justify-content: flex-end;
+  gap: 10vw;
+  align-items: flex-start;
+}
+.cart-details2 {
+  grid-column-start: col4;
+  grid-column-end: col6;
+  grid-row-start: row2-start;
+  grid-row-end: row2-start;
+  background-color: white;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-start;
+  padding-top: 20px;
+}
+
+.container-cart-labels {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  gap: 10px;
+  padding: 50px 50px 0px 50px;
+}
+
+.child {
+  width: 50%;
+}
+
+.remove-item {
+  font-size: 0.75rem;
+}
+
+/* styling the quantity input box */
+
+.input-text {
+  background-color: red;
+  width: 3vh;
+  height: 2rem;
+}
+/* END OF CART GRID */
